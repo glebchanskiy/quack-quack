@@ -1,0 +1,7 @@
+CREATE TABLE Kryakochka (
+    id SERIAL PRIMARY KEY,
+    replyId INT REFERENCES Kryakochka(id) ON DELETE SET NULL,
+    what TEXT NOT NULL,
+    "when" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    who TEXT NOT NULL
+);

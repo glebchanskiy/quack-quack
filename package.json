@@ -1,0 +1,30 @@
+{
+  "name": "quack-quack",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:lint": "tsc && vite build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gen-types": "npx supabase gen types typescript --local > src/supabase/supabase.types.ts",
+    "postinstall": "npm run gen-types"
+  },
+  "dependencies": {
+    "@preact/signals": "^1.2.3",
+    "@supabase/supabase-js": "^2.43.4",
+    "js-cookie": "^3.0.5",
+    "preact": "^10.19.6",
+    "vite-plugin-singlefile": "^2.0.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.8.2",
+    "@types/js-cookie": "^3.0.6",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
